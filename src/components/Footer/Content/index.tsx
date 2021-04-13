@@ -10,30 +10,30 @@ const FooterData = styled.div`
     text-align: center;
     color: var(--branco);
     padding: 10px 0;
-
     @media(min-width: 768px) {
         text-align: left;
         width: 33%;
+        padding-left: 80px;
     }
 `
 const Content = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     ${FooterData} {
         border-bottom: 1px solid var(--branco);
     }
 
     @media(min-width: 768px) {
-        width: 80%;
-        margin-top: 30px;
+        width: 100%;
         ${FooterData} {
             border: none;
         }
     }
 `
 const Info = styled.div`
+    width: 70%;
+    margin-bottom: 25px;
     @media(min-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -77,10 +77,14 @@ const Email = styled.a`
 `
 
 const Direitos = styled.p`
-    color: var(--branco);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.6rem;
-    height: 50px;
-
+    color: var(--branco);
+    background-color: var(--footer-dark);
 `
 
 export default function FooterContent() {
@@ -113,7 +117,7 @@ export default function FooterContent() {
                             <Icon>
                                 <FiMail />
                             </Icon>
-                            <Email href="">
+                            <Email href="mailto: fernandozek@hotmail.com">
                                 fernandozek@hotmail.com
                             </Email>
                         </li>

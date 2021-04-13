@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 import BackGround from '../images/bg.jpg'
 export const HomeContainer = styled.div`
     height: 500px;
@@ -40,7 +41,7 @@ export const ImgBox = styled.div`
     transition: 0.3s;
     
 `
-export const Item = styled.div`
+export const Item = styled(Link)`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +50,8 @@ export const Item = styled.div`
     position: relative;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
+    color: white;
     -webkit-box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75); 
     box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75);
     :hover{
@@ -92,5 +95,5 @@ export const Image = styled.img`
 `
 
 export const TitleAlbun = styled.h3`
-    
+    font-size: 17px;
 `

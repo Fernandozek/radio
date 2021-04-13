@@ -26,6 +26,7 @@ const Menus = styled.nav`
     position: fixed;
     right: 0;
     top: 0;
+    box-shadow: none;
     transform: ${(props: MenusProps) => props.open ? 'translateX(100%)' : 'translateX(0)'};
     transition: 0.3s;
     
@@ -39,12 +40,8 @@ const Menus = styled.nav`
         flex: 1;
         background-color: transparent;
         justify-content: space-between;  
-
-       
     }
-    
 `
-
 export default function Menu() {
 
     const [open, setOpen] = useState(true);

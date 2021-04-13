@@ -2,13 +2,14 @@
 
 :root {
     --primaria: #11515F;
-    --primaria-dark: #4A95FF;
+    --primaria-dark: #012E38;
 
     --secundaria: #FFC107;
-    
-    --text: #243E6A;
+
+    --footer: #444;
+    --footer-dark: #1d1d1d;
     --branco: #FFFFFF;
-    --cinza: #1d1212;
+    --cinza: #a0a0a0;
     --body: #F0F0F7;
     --fundo: #575757;
     --gray2: #4f4f4f;
@@ -24,7 +25,7 @@
     --color-text-container: #FFFFFF;
     --color-link: #FFFFFF;
     
-    font-size: 62.5%;
+    font-size: 62.5% !important;
 }
 
 * {

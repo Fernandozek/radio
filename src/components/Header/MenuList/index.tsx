@@ -13,7 +13,7 @@ const MenuList = styled.ul`
         color: var(--branco);
         text-decoration: none;
         text-align: center;
-        
+        font-size: 25px;
         @media(min-width: 768px){
             color: var(--branco);
         }

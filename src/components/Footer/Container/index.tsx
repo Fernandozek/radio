@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import FooterContent from '../Content';
 
 const FooterContainer = styled.footer`
-    background-color: var(--fundo);
+    background-color: var(--footer);
     margin-top: auto;
     @media(min-width: 768px){
         display: flex;
