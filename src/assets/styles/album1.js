@@ -69,10 +69,17 @@ export const MusicSelected = styled.div`
     padding: 0 20px;
     width: 100%;
     height: 60px;
-    color: green;
     border: 1px solid var(--cinza);
     border-radius: 5px;
     cursor: pointer;
+    color: green;
+    animation: changeColor 3s infinite;
+    animation-name: changeColor;
+    @keyframes changeColor {
+        50% {box-shadow: 0px 2px 4px green;}
+    }
+    
+    
 `
 export const MusicName = styled.div`
     display: flex;
@@ -109,6 +116,7 @@ export const Selected = styled.div`
     justify-content: center;
     position: absolute;
     color: var(--branco);
+    
 `
 export const CapaSelected = styled.img`
     width: 150px;
@@ -273,11 +281,26 @@ export const Musica = styled.div`
     ${AudioPlayer}{
         height: 30px;
     }
+    .rhap_container svg{
+        color: white;
+    }
     .rhap_container{
         background-color: rgba(0,0,0,0) !important;
         border: none !important;
         color: white;
         box-shadow: none;
+    }
+    .rhap_progress-filled{
+        background-color: green;
+    }
+    .rhap_progress-indicator{
+        background-color: rgba(3,3,3,0.6);
+        :hover{
+            height: 23px;
+            width: 23px;
+            bottom: 100px;
+            transition: 0.3;
+        }
     }
     .rhap_additional-controls {
         width: 100px;
@@ -289,6 +312,9 @@ export const Musica = styled.div`
             width: 1px;
         }
 
+    }
+    .rhap_time {
+        color: var(--branco);
     }
     .rhap_container h3{
         position: absolute;

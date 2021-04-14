@@ -28,11 +28,11 @@ export default function Home() {
                                     <Item key={music.nome}
                                         onClick={() => setAlbumselect(music.id)}
                                         to={{
-                                            pathname: "/queen",
+                                            pathname: "/album",
                                             state: {
                                                 albumselect: music.id
                                             }
-                                        }}
+                                        }}   
                                     >
                                         <Config>
                                             <ImgBox>
