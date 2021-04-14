@@ -103,7 +103,6 @@ export default function Album(props: any) {
                                 albumexibe === 6 &&
                                 <CapaSelected src={capa1} />
                             }
-                            <audio style={{ height: 30, width: 200 }} src={playlist[currentMusicIndex].src} controls ></audio>
 
                             <h4>{ALBUNS[albumexibe - 1].nome}</h4>
                         </Selected>
