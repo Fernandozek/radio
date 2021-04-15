@@ -70,6 +70,7 @@ export const Albuns = styled.div`
         margin-right: 10px;
         height: 300px;
     }
+    width: 550px;
     height: 400px;
     color: white;
     display: grid;
