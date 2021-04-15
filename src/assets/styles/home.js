@@ -39,7 +39,7 @@ export const Message = styled.div`
     width: 100%;
     color: white;
     margin-top: 30px;
-    margin-left: 20px;
+    padding-left: 20px;
     h1{
         font-size: 25px;
         margin-bottom: 30px;
@@ -49,7 +49,7 @@ export const Message = styled.div`
         font-size: 15px;
     }
     @media(min-width: 768px){
-        margin-left: 80px;
+        padding-left: 80px;
     }
 `
 export const Right = styled.div`
