@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import perfil from '../../../assets/images/user.png';
+import perfil from '../../../assets/images/user.jpg';
 
 const User = styled.div`
     display: flex;

@@ -4,11 +4,17 @@ import BackGround from '../images/bgl.jpg';
 export const Page = styled.div`
     width: 100%;
     height: 100%;
+    @media(min-width: 768px){
+        
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
 `
 export const Album1Container = styled.div`
+    @media(max-width: 768px){
+        height: 500px;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,6 +23,12 @@ export const Album1Container = styled.div`
     height: 450px;
 `
 export const Section = styled.section`
+    @media(max-width: 768px){
+        margin-top: 170px;
+        width: 95%;
+        margin-left: 10px;
+        height: 300px;
+    }
     width: 500px;
     height: 80%;
     margin-top: 30px;
@@ -59,6 +71,12 @@ export const Music = styled.div`
     border-radius: 5px;
     cursor: pointer;
 `
+export const Lotie = styled.div`
+    margin-top: 35px;
+    p{
+        position: absolute;
+    }
+`
 export const MusicSelected = styled.div`
     background-color: rgba(41, 84, 77, 0.1);
     background: rgba(41, 84, 77, 0.2);
@@ -78,8 +96,6 @@ export const MusicSelected = styled.div`
     @keyframes changeColor {
         50% {box-shadow: 0px 2px 4px green;}
     }
-    
-    
 `
 export const MusicName = styled.div`
     display: flex;
@@ -88,18 +104,27 @@ export const MusicName = styled.div`
     p{
         font-size: 20px;
     }
+    position: absolute;
+    margin-bottom: 10px;
 `
 export const Name = styled.h3`
     font-size: 14px;
     margin-left: 10px;
     font-weight: 300;
-    margin-top: 9px;
+    margin-top: 0px;
 `
 export const MusicTime = styled.div`
+    @media(max-width: 768px){
+        left: 85%;
+    }
     font-size: 14px;
-
+    position: absolute;
+    left: 90%;
 `
 export const Left = styled.div`
+    @media(max-width: 768px){
+        width: 100%;
+    }
     width: calc(100% - 250px);
     height: 100%;
     position: relative;
@@ -108,6 +133,14 @@ export const Left = styled.div`
     background-size: cover;
 `
 export const Selected = styled.div`
+    @media(max-width: 768px){
+        width: 100px;
+        height: 100px;
+        margin: 20px 0 0 130px;
+        h3{
+            text-align: center;
+        }
+    }
     width:500px;
     height: 400px;
     display: flex;
@@ -116,9 +149,15 @@ export const Selected = styled.div`
     justify-content: center;
     position: absolute;
     color: var(--branco);
-    
+    h3{
+        font-size: 15px;
+    }
 `
 export const CapaSelected = styled.img`
+    @media(max-width: 768px){
+        height: 80px;
+        width: 80px;
+    }
     width: 150px;
     height: 150px;
 `
@@ -129,7 +168,24 @@ export const Efects = styled.div`
 
 `
 export const Right = styled.div`
+    @media(max-width: 768px){
+        display: none;
+    }
     width: 250px;
+    overflow: inherit;
+    height: 450px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,79,93,1) 30%, rgba(17,81,95,1) 70%, rgba(0,0,0,1) 100%);
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+export const Right2 = styled.div`
+    @media(min-width: 768px){
+        display: none;
+    }
+    width: 100%;
     overflow: inherit;
     height: 450px;
     background: rgb(0,0,0);
@@ -176,6 +232,35 @@ export const Item = styled.div`
 `
 export const Albuns = styled.div`
     width: 250px;
+    height: 450px;
+    color: white;
+    overflow-y: auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--cinza); 
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #909090; 
+    }
+
+    ${Item}:last-child{
+        margin-bottom: 50px;
+    }
+`
+export const Albuns2 = styled.div`
+    width: 100%;
     height: 450px;
     color: white;
     overflow-y: auto;
@@ -264,6 +349,9 @@ export const TitleAlbun = styled.h3`
     font-size: 15px;
 `
 export const Player = styled.div`
+    @media(max-width: 768px){
+    
+    }
     width: 100%;
     height: 100%;
     background-color: var(--primaria);
@@ -273,13 +361,21 @@ export const Player = styled.div`
     justify-content: center;
 `
 export const Musica = styled.div`
+    @media(max-width: 768px){
+        width: 100%;
+    }
     width: 800px;
     height: 100%;
     h2{
         font-size: 16px;
     }
-    ${AudioPlayer}{
-        height: 30px;
+    
+    .rhap_controls-section{
+        @media(max-width: 768px){
+            width: 100%;
+            justify-content: center;
+            align-items: center ;
+        }
     }
     .rhap_container svg{
         color: white;
@@ -303,6 +399,9 @@ export const Musica = styled.div`
         }
     }
     .rhap_additional-controls {
+    @media(max-width: 768px){
+        width: 30px;
+    }
         width: 100px;
         height:20px;
         position: relative;
@@ -313,10 +412,18 @@ export const Musica = styled.div`
         }
 
     }
+    .rhap_main-controls{
+    @media(max-width: 768px){
+    }
+    }
     .rhap_time {
         color: var(--branco);
     }
     .rhap_container h3{
+    @media(max-width: 768px){
+        display: none;
+    }
+    display: inline;
         position: absolute;
         width: 250px;
         height: 35px;

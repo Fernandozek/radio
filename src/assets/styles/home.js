@@ -1,23 +1,63 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import BackGround from '../images/bg.jpg'
 export const HomeContainer = styled.div`
-    height: 500px;
     width: 100%;
+    height: 100%;
     background-image: url(${BackGround});
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    
+    @media(min-width: 768px){
+        height: 500px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+    }
 `
+
 export const Wellcome = styled.div`
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    @media(min-width: 768px){
+        width: 50%;
+        height: 100%;
+
+    }
+`
+export const Icon = styled.div`
+    width: 150px;
+    padding-left: 100px;
+    div{
+        margin-left: 0;
+        margin-right: 100px;
+    }
+`
+export const Message = styled.div`
+    width: 100%;
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+    h1{
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    p{
+        width: 300px;
+        font-size: 15px;
+    }
+    @media(min-width: 768px){
+        margin-left: 80px;
+    }
 `
 export const Right = styled.div`
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    @media(min-width: 768px){
+        width: 50%;
+        height: 100%;
+    }
 `
 export const Tocados = styled.h2`
     font-size: 24px;
@@ -25,10 +65,13 @@ export const Tocados = styled.h2`
     color: var(--branco);
 `
 export const Albuns = styled.div`
-    width: 85%;
+    @media(max-width: 768px){
+        width: 100%;
+        margin-right: 10px;
+        height: 300px;
+    }
     height: 400px;
     color: white;
-    margin-right: 100px;
     display: grid;
     grid-gap: 15px 30px;
     grid-template-columns: 27% 27% 27%;
@@ -42,6 +85,9 @@ export const ImgBox = styled.div`
     
 `
 export const Item = styled(Link)`
+    @media(max-width: 768px){
+        height: 90px;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,6 +108,9 @@ export const Item = styled(Link)`
     }
 `
 export const Content = styled.div`
+    @media(max-width: 768px){
+        bottom: -70%;
+    }
     position: absolute;
     bottom: -100%;
     width: 100%;
@@ -85,13 +134,19 @@ export const Config = styled.div`
 `
 
 export const Image = styled.img`
-    height: 150px;
-    width: 150px;
     position: absolute;
+    width: 90px;
+    height: 90px;
     
     :hover{
         transition: 0.3s;
     }
+    @media(min-width: 768px){
+        width: 150px;
+        height: 150px;
+
+    }
+    
 `
 
 export const TitleAlbun = styled.h3`

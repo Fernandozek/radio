@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PageTemplate from '../PageTemplate';
-import { HomeContainer, Wellcome, Right, Tocados, Albuns, Config, Item, ImgBox, Image, Content, TitleAlbun } from '../../assets/styles/home.js';
+import { HomeContainer, Wellcome, Message, Icon, Right, Tocados, Albuns, Config, Item, ImgBox, Image, Content, TitleAlbun } from '../../assets/styles/home.js';
 import { ALBUNS } from '../../Utils/Albuns';
 import capa1 from '../../assets/images/queen.jpg';
 import capa2 from '../../assets/images/red hot chili peppers.jpg';
@@ -8,17 +8,42 @@ import capa3 from '../../assets/images/muse.jpg';
 import capa4 from '../../assets/images/Linkin Park.jpg';
 import capa5 from '../../assets/images/pearl jam.jpg';
 import capa6 from '../../assets/images/lynyrd skynyrd.jpg';
+import Lottie from 'react-lottie';
+import animationData from './music-burst-icon.json';
+import animationData1 from './icon.json';
 
 export default function Home() {
-    
-    const [albumselect, setAlbumselect] = useState(0);
 
+    const [albumselect, setAlbumselect] = useState(0);
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+        }
+    };
     return (
         <PageTemplate
             topBar={true}
         >
             <HomeContainer>
-                <Wellcome></Wellcome>
+                <Wellcome>
+                    <Message>
+
+                        <h1>Seja bem vindo(a) a Radio Ufersa!</h1>
+                        <p>Esta rádio foi construida sobe a demanda da disciplina de Multimídia 2020.2. <br /><br/>
+                        Escolha um album de sua preferência e aproveite do melhor som ;).
+                     </p>
+                    </Message>
+                    <Icon>
+                        <Lottie
+                            options={defaultOptions}
+                            height={100}
+                            width={100}
+                        />
+                    </Icon>
+                </Wellcome>
                 <Right>
                     <Tocados>Mais tocados na semana!</Tocados>
                     <Albuns>
@@ -32,7 +57,7 @@ export default function Home() {
                                             state: {
                                                 albumselect: music.id
                                             }
-                                        }}   
+                                        }}
                                     >
                                         <Config>
                                             <ImgBox>

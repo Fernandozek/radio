@@ -2,7 +2,7 @@ import React, { createContext, forwardRef, ReactNode, useContext, useEffect, use
 import PageTemplate from '../PageTemplate';
 import AudioPlayer, { RHAP_UI } from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import { Page, Album1Container, Section, Left, Right, Albuns, Name, CapaSelected, MusicName, MusicTime, Player, Recomendadas, Selected, Music, Musica, Item, Config, ImgBox, Image, Content, TitleAlbun, MusicSelected, Volume } from '../../assets/styles/album1';
+import { Page, Album1Container, Section, Left, Right, Albuns, Name, CapaSelected, MusicName, MusicTime, Player, Recomendadas, Selected, Music, Musica, Item, Config, ImgBox, Image, Content, TitleAlbun, MusicSelected, Volume, Lotie, Right2, Albuns2 } from '../../assets/styles/album1';
 import { Queen } from '../../Data/queen';
 import { RHCP } from '../../Data/rhcp';
 import { Muse } from '../../Data/muse';
@@ -17,7 +17,8 @@ import capa2 from '../../assets/images/red hot chili peppers.jpg';
 import capa3 from '../../assets/images/muse.jpg';
 import capa4 from '../../assets/images/Linkin Park.jpg';
 import capa5 from '../../assets/images/pearl jam.jpg';
-
+import Lottie from 'react-lottie';
+import animationData from './kiss-of-the-heart.json';
 export default function Album(props: any) {
     const [albumexibe, setAlbumexibe] = useState(props.location.state.albumselect);
     const [played, setPlayed] = useState(1);
@@ -69,6 +70,15 @@ export default function Album(props: any) {
             }
         }
     }
+    
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+        }
+    };
     return (
 
         <PageTemplate
@@ -104,7 +114,7 @@ export default function Album(props: any) {
                                 <CapaSelected src={capa1} />
                             }
 
-                            <h4>{ALBUNS[albumexibe - 1].nome}</h4>
+                            <h3>{ALBUNS[albumexibe - 1].nome}</h3>
                         </Selected>
                         <Section>
                             {
@@ -114,9 +124,19 @@ export default function Album(props: any) {
                                             {
                                                 music.id === currentMusicIndex + 1 &&
                                                 <MusicSelected key={music.name} onClick={() => selectMusic(music.id)}>
+                                                    <Lotie>
+                                                        <Lottie
+                                                            options={defaultOptions}
+                                                            height={20}
+                                                            width={"100%"}
+                                                        />
+                                                    </Lotie>
                                                     <MusicName>
                                                         <p><BsMusicNote /></p>
                                                         <Name>{music.name}</Name>
+                                                        <div>
+
+                                                        </div>
                                                     </MusicName>
                                                     <MusicTime>
                                                         {music.time}
@@ -177,7 +197,6 @@ export default function Album(props: any) {
                                                         music.id === 6 &&
                                                         <Image src={capa1} />
                                                     }
-
                                                 </ImgBox>
                                                 <Content>
                                                     <TitleAlbun>{music.nome} </TitleAlbun>
@@ -194,7 +213,7 @@ export default function Album(props: any) {
                 <Player>
                     <Musica>
                         <AudioPlayer
-                            autoPlay={false}
+                            autoPlay={true}
                             className="ap"
                             layout="stacked-reverse"
                             src={playlist[currentMusicIndex].src}
@@ -212,6 +231,54 @@ export default function Album(props: any) {
 
                     </Musica>
                 </Player>
+                <Right2>
+                    <Albuns2>
+                        <Recomendadas>
+                            Ouça também
+                            </Recomendadas>
+                        {
+                            ALBUNS.filter(p => p.post === true && p.id !== albumexibe).map((music) => {
+                                return (
+                                    <Item key={music.nome} onClick={() => albumSelect(music.id)}>
+                                        <Config>
+                                            <ImgBox>
+
+                                                {
+                                                    music.id === 1 &&
+                                                    <Image src={capa1} />
+                                                }
+                                                {
+                                                    music.id === 2 &&
+                                                    <Image src={capa2} />
+                                                }
+                                                {
+                                                    music.id === 3 &&
+                                                    <Image src={capa3} />
+                                                }
+                                                {
+                                                    music.id === 4 &&
+                                                    <Image src={capa4} />
+                                                }
+                                                {
+                                                    music.id === 5 &&
+                                                    <Image src={capa5} />
+                                                }
+                                                {
+                                                    music.id === 6 &&
+                                                    <Image src={capa1} />
+                                                }
+                                            </ImgBox>
+                                            <Content>
+                                                <TitleAlbun>{music.nome} </TitleAlbun>
+
+                                            </Content>
+                                        </Config>
+                                    </Item>
+                                );
+                            })
+                        }
+                    </Albuns2>
+                </Right2>
             </Page>
         </PageTemplate>
     );

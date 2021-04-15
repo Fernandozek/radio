@@ -10,6 +10,12 @@ const FooterData = styled.div`
     text-align: center;
     color: var(--branco);
     padding: 10px 0;
+    @media(max-width:767px){
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
     @media(min-width: 768px) {
         text-align: left;
         width: 33%;
