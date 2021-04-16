@@ -3,42 +3,36 @@ export const ALBUNS = [
         "id": 1,
         "nome": "Queen",
         "image": "images/queen.jpg",
-        "post": true,
-        "link": "/queen",
+        "post": true
     },
     {
         "id": 2,
         "nome": "Red Hot Chili Peppers",
-        "image": "images/red hot chili peppers.jpg",
-        "post": true,
-        "link": "/rhcp",
+        "image": "im0ages/red hot chili peppers.jpg",
+        "post": true
     },
     {
         "id": 3,
         "nome": "Muse",
         "image": "images/muse.jpg",
-        "post": true,
-        "link": "/muse",
+        "post": true
     },
     {
         "id": 4,
         "nome": "Linkin Park",
         "image": "images/Linkin Park.jpg",
-        "post": true,
-        "link": "/lp",
+        "post": true
     },
     {
         "id": 5,
         "nome": "Pearl Jam",
         "image": "images/pearl jam.jpg",
-        "post": true,
-        "link": "/pj",
+        "post": true
     },
     {
         "id": 6,
         "nome": "Lynyrd Skynyrd",
         "image": "images/lynyrd skynyrd.jpg",
-        "post": true,
-        "link": "/ls",
+        "post": true
     },
 ]

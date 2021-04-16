@@ -17,6 +17,8 @@ import capa2 from '../../assets/images/red hot chili peppers.jpg';
 import capa3 from '../../assets/images/muse.jpg';
 import capa4 from '../../assets/images/Linkin Park.jpg';
 import capa5 from '../../assets/images/pearl jam.jpg';
+import capa6 from '../../assets/images/lynyrd skynyrd.jpg';
+
 import Lottie from 'react-lottie';
 import animationData from './kiss-of-the-heart.json';
 export default function Album(props: any) {
@@ -111,7 +113,7 @@ export default function Album(props: any) {
                             }
                             {
                                 albumexibe === 6 &&
-                                <CapaSelected src={capa1} />
+                                <CapaSelected src={capa6} />
                             }
 
                             <h3>{ALBUNS[albumexibe - 1].nome}</h3>
@@ -195,7 +197,7 @@ export default function Album(props: any) {
                                                     }
                                                     {
                                                         music.id === 6 &&
-                                                        <Image src={capa1} />
+                                                        <Image src={capa6} />
                                                     }
                                                 </ImgBox>
                                                 <Content>
@@ -242,7 +244,6 @@ export default function Album(props: any) {
                                     <Item key={music.nome} onClick={() => albumSelect(music.id)}>
                                         <Config>
                                             <ImgBox>
-
                                                 {
                                                     music.id === 1 &&
                                                     <Image src={capa1} />

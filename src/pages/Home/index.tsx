@@ -31,9 +31,9 @@ export default function Home() {
                 <Wellcome>
                     <Message>
 
-                        <h1>Seja bem vindo(a) a Radio Ufersa!</h1>
-                        <p>Esta rádio foi construida sobe a demanda da disciplina de Multimídia 2020.2. <br /><br/>
-                        Escolha um album de sua preferência e aproveite do melhor som ;).
+                        <h1>Seja bem-vindo(a) à Rádio Ufersa!</h1>
+                        <p>Esta rádio foi construída sob a demanda da disciplina de Multimídia 2020.2. <br /><br/>
+                        Escolha um álbum de sua preferência e aproveite do melhor som ;).
                      </p>
                     </Message>
                     <Icon>
