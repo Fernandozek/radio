@@ -136,7 +136,7 @@ export const Selected = styled.div`
     @media(max-width: 768px){
         width: 100px;
         height: 100px;
-        margin: 20px 0 0 130px;
+        margin: 8% 0 0 35%;
         h3{
             text-align: center;
         }
@@ -193,6 +193,7 @@ export const Right2 = styled.div`
     display: inline-block;
     flex-direction: column;
     align-items: center;
+    color: white;
     justify-content: center;
 `
 export const Recomendadas = styled.h2`
@@ -202,6 +203,10 @@ export const Recomendadas = styled.h2`
 `
 
 export const ImgBox = styled.div`
+    @media(max-width: 768px){
+        width: 90px;
+        height: 90px;
+    }
     width: 150px;
     height: 150px;
     position: absolute;
@@ -209,6 +214,14 @@ export const ImgBox = styled.div`
     
 `
 export const Item = styled.div`
+    @media(max-width: 768px){
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     width: 150px;
     height: 150px;
     margin-bottom: 30px;
@@ -221,8 +234,7 @@ export const Item = styled.div`
     transition: 0.3s;
     text-decoration: none;
     color: white;
-    -webkit-box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75); 
-    box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75);
+    
     :hover{
         transform: scale(1.1);
         ${ImgBox}{
@@ -261,32 +273,13 @@ export const Albuns = styled.div`
 `
 export const Albuns2 = styled.div`
     width: 100%;
-    height: 450px;
-    color: white;
-    overflow-y: auto;
-    margin-right: 10px;
-    display: flex;
+    height: 350px;
+    display: grid;
+    grid-gap: 15px 0px;
+    grid-template-columns: 30% 30% 30%;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey; 
-        border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--cinza); 
-        border-radius: 10px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #909090; 
-    }
-
-    ${Item}:last-child{
-        margin-bottom: 50px;
-    }
 `
 export const Content = styled.div`
     position: absolute;
@@ -297,6 +290,10 @@ export const Content = styled.div`
     transition: 0.3s;
 `
 export const Config = styled.div`
+    @media(max-width: 768px){
+        width: 90px;
+        height: 90px;
+    }
     width: 150px;
     height: 150px;
     display: flex;
@@ -304,6 +301,8 @@ export const Config = styled.div`
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    -webkit-box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75); 
+    box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75);
     :hover{
         ${Content}{
             bottom:20%;
@@ -337,6 +336,10 @@ export const Volume = styled.input`
 
 `
 export const Image = styled.img`
+    @media(max-width: 768px){
+        height: 90px;
+        width: 90px;
+    }
     height: 150px;
     width: 150px;
     position: absolute;

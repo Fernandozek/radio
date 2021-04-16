@@ -23,6 +23,9 @@ import Lottie from 'react-lottie';
 import animationData from './kiss-of-the-heart.json';
 export default function Album(props: any) {
     const [albumexibe, setAlbumexibe] = useState(props.location.state.albumselect);
+    if(albumexibe !== 1 && albumexibe !== 2 && albumexibe !== 3 && albumexibe !== 4 && albumexibe !== 5 && albumexibe !== 6){
+        setAlbumexibe(0);
+    }
     const [played, setPlayed] = useState(1);
     const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
     const [al, setAl] = useState("aria-label");
@@ -72,7 +75,7 @@ export default function Album(props: any) {
             }
         }
     }
-    
+
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -234,10 +237,10 @@ export default function Album(props: any) {
                     </Musica>
                 </Player>
                 <Right2>
+                    <Recomendadas>
+                        Ouça também
+                    </Recomendadas>
                     <Albuns2>
-                        <Recomendadas>
-                            Ouça também
-                            </Recomendadas>
                         {
                             ALBUNS.filter(p => p.post === true && p.id !== albumexibe).map((music) => {
                                 return (
@@ -266,7 +269,7 @@ export default function Album(props: any) {
                                                 }
                                                 {
                                                     music.id === 6 &&
-                                                    <Image src={capa1} />
+                                                    <Image src={capa6} />
                                                 }
                                             </ImgBox>
                                             <Content>
