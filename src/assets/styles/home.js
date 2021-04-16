@@ -87,7 +87,8 @@ export const ImgBox = styled.div`
 `
 export const Item = styled(Link)`
     @media(max-width: 768px){
-        height: 90px;
+        height: 100%;
+        width: 100%;
     }
     display: flex;
     flex-direction: column;
@@ -99,8 +100,7 @@ export const Item = styled(Link)`
     transition: 0.3s;
     text-decoration: none;
     color: white;
-    -webkit-box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75); 
-    box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75);
+    
     :hover{
         transform: scale(1.1);
         ${ImgBox}{
@@ -110,6 +110,7 @@ export const Item = styled(Link)`
 `
 export const Content = styled.div`
     @media(max-width: 768px){
+
         bottom: -70%;
     }
     position: absolute;
@@ -120,6 +121,12 @@ export const Content = styled.div`
     transition: 0.3s;
 `
 export const Config = styled.div`
+    @media(max-width: 768px){
+        width: 90px;
+        height: 90px;
+    }
+    -webkit-box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75); 
+    box-shadow: 3px 6px 9px 0px rgba(200,200,200,0.75);
     width: 100%;
     height: 100%;
     display: flex;
